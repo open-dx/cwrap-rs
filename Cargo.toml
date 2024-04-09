@@ -1,0 +1,48 @@
+[package]
+name = "cwrap"
+version = "0.0.0"
+edition = "2021"
+
+# TODO: Remove this when we're ready to publish.
+publish = false
+
+[features]
+default = ["debug", "macros"]
+debug = ["tracing", "cwrap-core/debug", "cwrap-macros/debug"]
+verbose = ["cwrap-core/verbose", "cwrap-macros/verbose"]
+macros = ["cwrap-macros"]
+
+#--
+[lib]
+name = "cwrap"
+
+#--
+[[example]]
+name = "simple"
+required-features = ["debug", "macros"]
+
+#--
+[dependencies]
+
+[dependencies.cwrap-core]
+path = "./core"
+
+[dependencies.cwrap-macros]
+path = "./macros"
+optional = true
+
+[dependencies.oops]
+git = "https://github.com/open-dx/oops-rs"
+
+[dependencies.tracing]
+version = "0.1"
+default-features = false
+optional = true
+features = [
+    "log",
+    "log-always",
+    "attributes",
+    "tracing-attributes",
+    "max_level_trace",
+    "release_max_level_warn",
+]
