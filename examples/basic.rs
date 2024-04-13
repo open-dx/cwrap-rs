@@ -4,15 +4,15 @@
 use std::process::ExitCode;
 
 /// TODO
-fn main() -> Result<ExitCode, SimpleExampleError> {
+pub fn main() -> Result<ExitCode, SimpleExampleError> {
     Ok(ExitCode::SUCCESS)
 }
 
 //---
-/// Dependency error uses the Error derive macro to implement 
+/// TODO
 #[derive(oops::Error)]
 pub enum SimpleExampleError {
     /// Something else is wrong, but not sure what.
-    #[msg="a generic error occurred"]
+    #[msg="an unknown error occurred"]
     GenericError,
 }

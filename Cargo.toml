@@ -8,8 +8,8 @@ publish = false
 
 [features]
 default = ["debug", "macros"]
-debug = ["tracing", "cwrap-core/debug", "cwrap-macros/debug"]
-verbose = ["cwrap-core/verbose", "cwrap-macros/verbose"]
+debug = ["tracing", "cwrap-core/debug", "cwrap-macros/debug", "oops/debug"]
+verbose = ["cwrap-core/verbose", "cwrap-macros/verbose", "oops/verbose"]
 macros = ["cwrap-macros"]
 
 #--
@@ -18,7 +18,8 @@ name = "cwrap"
 
 #--
 [[example]]
-name = "simple"
+name = "cwrap-basic"
+path = "./examples/basic.rs"
 required-features = ["debug", "macros"]
 
 #--
@@ -41,8 +42,6 @@ optional = true
 features = [
     "log",
     "log-always",
-    "attributes",
-    "tracing-attributes",
     "max_level_trace",
     "release_max_level_warn",
 ]

@@ -5,16 +5,19 @@ edition = "2021"
 publish = false
 
 [features]
-default = []
-debug = ["tracing"]
-verbose = []
+default = ["debug"]
+debug = ["tracing", "oops/debug"]
+verbose = ["oops/verbose"]
 
 #--
 [lib]
-name = "oops_core"
+name = "cwrap_core"
 
 #--
 [dependencies]
+
+[dependencies.oops]
+git = "https://github.com/open-dx/oops-rs"
 
 [dependencies.tracing]
 version = "0.1"
@@ -23,8 +26,6 @@ optional = true
 features = [
     "log",
     "log-always",
-    "attributes",
-    "tracing-attributes",
     "max_level_trace",
     "release_max_level_warn",
 ]
