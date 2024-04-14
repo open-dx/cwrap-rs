@@ -1,4 +1,3 @@
-use core::ffi::CStr;
 use core::str::Utf8Error;
 
 #[macro_export]

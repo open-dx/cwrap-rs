@@ -1,3 +1,7 @@
+use std::ffi::CStr;
+
+use crate::error::CStringError;
+
 
 /// TODO
 pub unsafe fn try_unwrap_cstr<'out>(bytes: *const i8) -> Result<&'out str, CStringError> {
