@@ -4,7 +4,5 @@
 #![feature(error_in_core)] // </3
 
 //--
-pub use cwrap_core::string;
+pub use cwrap_core::*;
 pub use cwrap_core::string::*;
-
-pub use cwrap_core::error;

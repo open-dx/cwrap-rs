@@ -45,3 +45,6 @@ features = [
     "max_level_trace",
     "release_max_level_warn",
 ]
+
+[dev-dependencies]
+anyhow = { version = "1.0.82", features = ["backtrace"] }
