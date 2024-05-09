@@ -14,6 +14,14 @@ pub fn report_err<E: std::fmt::Display>(error: E) {
 
 /// TODO
 #[derive(oops::Error)]
+pub enum CBindingError {
+    /// TODO
+    #[msg = "c-binding error: {:}"]
+    CStringError(CStringError),
+}
+
+/// TODO
+#[derive(oops::Error)]
 pub enum CStringError {
     /// TODO
     #[msg = "c-string uninitialized"]
