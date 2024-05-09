@@ -20,6 +20,13 @@ pub enum CBindingError {
     CStringError(CStringError),
 }
 
+impl From<std::ffi::NulError> for CBindingError {
+    /// TODO
+    fn from(error: std::ffi::NulError) -> Self {
+        CBindingError::CStringError(CStringError::NulError(error))
+    }
+}
+
 /// TODO
 #[derive(oops::Error)]
 pub enum CStringError {
