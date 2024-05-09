@@ -5,4 +5,11 @@
 
 //--
 pub use cwrap_core::*;
+
 pub use cwrap_core::string::*;
+
+pub use cwrap_core::path::*;
+
+pub use cwrap_core::error::*;
+
+pub use cwrap_core::drop::*;
