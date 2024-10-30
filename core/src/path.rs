@@ -4,7 +4,6 @@ use std::ffi::CString;
 
 use crate::error::CStringError;
 
-
 /// TODO
 pub fn try_path_from_cstring(path_cstring: CString) -> Result<PathBuf, CStringError> {
     let path_str = crate::string::try_unwrap_cstr(path_cstring.as_ptr())?;

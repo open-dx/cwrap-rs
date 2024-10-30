@@ -1,6 +1,4 @@
 // TODO: Remove this as soon as `oops` drops it.
-#![feature(error_in_core)]
-
 use std::process::ExitCode;
 
 use anyhow::Result;
@@ -18,7 +16,7 @@ pub fn main() -> Result<ExitCode> {
 
 #[repr(C)]
 pub struct SomeExt {
-    // Some fields that might need external cleanup
+    // TODO: Some fields that need to be dropped ..
 }
 
 impl DropExtern for SomeExt {
