@@ -48,3 +48,4 @@ features = [
 
 [dev-dependencies]
 anyhow = { version = "1.0.82", features = ["backtrace"] }
+tracing = "0.1"
