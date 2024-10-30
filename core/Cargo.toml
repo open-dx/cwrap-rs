@@ -27,13 +27,3 @@ features = [
     "max_level_trace",
     "release_max_level_warn",
 ]
-
-[dev-dependencies.tracing]
-version = "0.1"
-default-features = true
-optional = false
-features = [
-    "log",
-    "log-always",
-    "max_level_trace",
-]
